@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background: #d4d4d4;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  border: none;
+}
+
+body {
+  margin: 0;
+  padding: 1%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #ffffff;
+  color: #000000;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.caja_de_titulo {
+  background-color: #505bf1;
+  color: #ffffff;
+  font-size: 1.5em;
+  border-radius: 10px;
+  height: 50px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  margin-bottom: 2rem;
+}
+
+.caja_redirigir {
+  position: relative;
+  top: -85px;
+  left: 1000px;
+  width: 300px;
+  height: 30;
+  background-color: #505bf1;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.boton {
+  border: 4px solid #ffffff;
+  color: #000000;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  font-size: 0.8em;
+}
+
+.grifo {
+  display: block;
+  margin: 2rem auto;
+  width: 800px;
+  height: 500px;
+  border: 4px solid #000000;
+}
+
+
+.articulo {
+  background-color: #f0f0f0;
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-size: 1.2em;
+}
