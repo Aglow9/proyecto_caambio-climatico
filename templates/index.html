@@ -5,20 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto_final</title>
-    <link rel="stylesheet" href="../static/css/style_index.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styleIndex.css') }}">
+
 </head>
 <body>
-    <h1 class="titulo-principal">Eco Aprendizaje</h1>
-    <div class="menu">
-        <p>Opciones</p>
-        <button class="boton" type="button" onclick="window.location.href='/articulo'">Articulos</button>
-        <button class="boton" type="button" onclick="alert('No hago nada jejeje')">cuestionarios</button>
-    </div>
+  <main class="estilo_index">
+  <h1 class="titulo-principal">Eco Aprendizaje</h1>
+      <div class="banner_principal">
+          <p>Aprender del medio ambiente nunca había sido tan fácil... Con Eco aprendizaje lograras comprender la importancia del medio ambiente de la mejor manera.</p>
+      </div>
+      <ul class="list">
+        <li class="list__item">
+          <a href="/articulo">
+          <img class="item__img" src="../static/img/redaccion-de-contenido 1.png" alt="home">
+          <span>Articulos</span></a>
+        </li>
+        <h2>Opciones</h2>
+        <!-- Asignación #1 -->
+        <li class="list__item">
+          <a href="/menu_juego">
+          <img class="item__img" src="../static/img/juegos-de-cartas 1.png" alt="home">
+          <span>Juegos</span></a>
+        </li>
+        </li>
+      </ul>
+  </main>
+   
 </body>
 </html>
-</head>
-<body>
-    <header class="header">
-        <img class="arbol" src="../static/img/arbol.svg" width="250" height="250" alt="post_icon">
-        </ul>
-      </header>

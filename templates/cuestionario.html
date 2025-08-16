@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../static/css/cuestionario.css">
+  <title>cuestionario_agua pregunta</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__text">
+      <h1>Elige que opcion ayuda a gastar menos agua</h1>
+      <p>Quiz del cuidado del agua</p>
+    </div>
+  </header>
+  <main>
+    {% block content %}
+    <h2 class="main__title">Responde</h2>
+    <ul class="list">
+      <li class="list__item">
+        <a href="/1">
+        <img class="item__img" src="../static/img/1.png" alt="home">
+        <span>Cerrar el grifo al lavar los dientes</span></a>
+      </li>
+      <!-- Asignación #1 -->
+      <li class="list__item">
+        <a href="/0">
+        <img class="item__img" src="../static/img/2.png" alt="home">
+        <span>Lavar el auto con manguera</span></a>
+        <span><!--Añadir texto para una opción de hogar mediano--></span></a>
+      </li>
+      <li class="list__item">
+        <a href="/0">
+        <img class="item__img" src="../static/img/3.png" alt="home">
+        <span>Tirar aceite por el  desagüe</span></a>
+        <span><!--Añadir texto para una opción de hogar grande--></span></a>
+      <!--  -->
+      </li>
+    </ul>
+    {% endblock %}
+  </main>
+  <footer>
+
+  </footer>
+</body>
+</html>
+

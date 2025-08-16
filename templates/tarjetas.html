@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memorama</title>
+  <link rel="stylesheet" href="../static/css/memorama.css">
+</head>
+<body>
+
+  <h1 class="text">Juegos de tarjetas </h1>
+   <div class="game-info">
+    <span class = "tiempo" id="timer">Tiempo: 60</span>
+    <span class = "puntos" id="score">Puntos: 0</span>
+  </div>
+  <div class="memory-game">
+    <!-- Cada tarjeta tiene dos caras y un data-name para emparejar -->
+    <div class="memory-card" data-name="tree">
+      <img class="front-face" src="../static/img/koala.png" alt="koala" />
+      <img class="back-face" src="../static/img/back.jpg" alt="Reverso" />
+    </div>
+
+    <div class="memory-card" data-name="tree">
+      <img class="front-face" src="../static/img/koala.png" alt="koala" />
+      <img class="back-face" src="../static/img/back.jpg" alt="Reverso" />
+    </div>
+
+    <div class="memory-card" data-name="flower">
+      <img class="front-face" src="../static/img/oso_polar.png" alt="oso" />
+      <img class="back-face" src="../static/img/back.jpg" alt="Reverso" />
+    </div>
+
+    <div class="memory-card" data-name="flower">
+      <img class="front-face" src="../static/img/oso_polar.png" alt="oso" />
+      <img class="back-face" src="../static/img/back.jpg" alt="Reverso" />
+    </div>
+
+     <div class="memory-card" data-name="cat">
+      <img class="front-face" src="../static/img/tigre.png" alt="tigre" />
+      <img class="back-face" src="../static/img/back.jpg" alt="Reverso" />
+    </div>
+
+    <div class="memory-card" data-name="cat">
+      <img class="front-face" src="../static/img/tigre.png" alt="tigre" />
+      <img class="back-face" src="../static/img/back.jpg" alt="Reverso" />
+    </div>
+    
+    <div class="memory-card" data-name="h">
+      <img class="front-face" src="../static/img/pinguino.png" alt="pinguino" />
+      <img class="back-face" src="../static/img/back.jpg" alt="Reverso" />
+    </div>
+
+
+    <div class="memory-card" data-name="h">
+      <img class="front-face" src="../static/img/pinguino.png" alt="pinguino" />
+      <img class="back-face" src="../static/img/back.jpg" alt="Reverso" />
+    </div>
+
+
+
+
+    <!-- Puedes seguir agregando más pares -->
+  </div>
+  <div id="end-screen" class="hidden">
+    <h2 id="end-message"></h2>
+    <p id="final-score"></p>
+    <div class="botones-container">
+      <button class = "replay" onclick="restartGame()">Volver a jugar</button>
+      <button class="boton-imagen" onclick="window.location.href='/index'">
+      <img src="../static/img/casa.png" width="50" height="50" alt="pos_icon">
+    </div>
+    </button>
+  </div>
+  
+  <div id="endScreen" class="hidden">
+  <img id="endImage" src="" alt="" />
+  <p id="finalScore"></p>
+</div>
+
+
+  <script src="../static/js/memorama.js"></script>
+</body>
+</html>

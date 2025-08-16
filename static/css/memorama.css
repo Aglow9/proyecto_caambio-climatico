@@ -1,0 +1,158 @@
+.memory-game {
+  width: 640px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  grid-gap: 10px;
+  perspective: 1000px;
+}
+
+body {
+  margin: 0;
+  padding: 1%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #d8d8d8;
+  color: #000000;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.memory-card {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face, .back-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+  backface-visibility: hidden;
+  border: 2px solid #000000;
+}
+
+.front-face, .back-face:hover {
+  transform: scale(1.10);
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+.text{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+
+.puntos{
+    font-size: 40px;
+    margin-bottom: 70px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 10px;
+    border: 2px solid #575757;
+    background: #d8d8d8;
+    color: #000000;
+    padding: 10px;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.2s;
+    align-items: center;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tiempo{
+    font-size: 35px;
+    margin-bottom: 70px;
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    margin: 10px;
+    border: 2px solid #575757;
+    background: #d8d8d8;
+    color: #000000;
+    padding: 10px;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.2s;
+    align-items: center;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton-imagen {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  display: grid;
+  transition: background-color 0.3s ease
+}
+.boton-imagen img {
+  display: block;
+  cursor: pointer;;
+}
+
+.boton-imagen:hover{
+  transform: scale(1.10);
+}
+
+
+.replay{
+    border: 2px solid #575757;
+    background: #131b66;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 10px;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.2s;
+    align-items: center;
+    border-radius: 25px;
+}
+.replay:hover{
+  transform: scale(1.10);
+}
+
+.botones-container{
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  gap: 10px; /* Espacio entre los botones */
+  margin-top: 30px;
+}
+
+#endImage {
+  width: 500px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  margin: auto;
+  position: relative;
+  top: -400px;
+  left: 410px;
+}
+

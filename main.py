@@ -1,11 +1,10 @@
 # Importar
 
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, jsonify
 
 # Conectando a la biblioteca de bases de datos
 
 from flask_sqlalchemy import SQLAlchemy
-
 app = Flask(__name__)
 # Conectando SQLite
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///user.db'
@@ -114,6 +113,81 @@ def articulo_info():
 @app.route('/login')
 def log():
     return render_template('login.html')
+
+@app.route('/menu_juego')
+def menu_juego():
+    return render_template('menu_juego.html')
+
+# Segunda página
+@app.route('/articulo')
+def articles():
+    return render_template(
+                            'articulo.html'
+                           )
+# Tercera página
+@app.route('/juegos')
+def games():
+    return render_template(
+                            'tarjetas.html'
+                           )
+# Tercera página
+@app.route('/tarjetas')
+def tarj():
+
+    return render_template(
+                            'tarjetas.html'
+                           )
+
+
+
+
+@app.route('/registro-cambio', methods=['POST'])
+def registro_cambio():
+    data = request.get_json()
+    cambiado = data.get('cambiado')
+    print(f"Imagen cambiada: {cambiado}")  # Puedes guardar esto en una base de datos si quieres
+    return jsonify({"status": "ok", "cambiado": cambiado})
+
+ #- cuestionario 1
+def result_calculate(pregunta_agua1, pregunta_agua2, pregunta_agua3):
+    return pregunta_agua1  + pregunta_agua2 + pregunta_agua3 
+
+
+@app.route('/cuestionario')
+def cuestionario_agua():
+    return render_template('cuestionario.html')
+
+# Segunda página
+@app.route('/<pregunta_agua1>')
+def cuestionario_agua1(pregunta_agua1):
+    return render_template(
+                            'cuestionario1.html', 
+                            pregunta_agua1 = pregunta_agua1
+                           )
+# La tercera página
+@app.route('/<pregunta_agua1>/<pregunta_agua2>')
+def cuestionario_agua2(pregunta_agua1, pregunta_agua2):
+    return render_template(
+                            'cuestionario2.html',                           
+                            pregunta_agua1 = pregunta_agua1, 
+                            pregunta_agua2  = pregunta_agua2                           
+                           )
+
+
+
+
+
+
+# Cálculo
+@app.route('/<pregunta_agua1>/<pregunta_agua2>/<pregunta_agua3>')
+def end(pregunta_agua1, pregunta_agua2, pregunta_agua3):
+    return render_template('end.html', 
+                            result=result_calculate(int(pregunta_agua1),
+                                                    int(pregunta_agua2),
+                                                    int(pregunta_agua3),
+                                                    )
+                        )
+
 
 
 if __name__ == "__main__":

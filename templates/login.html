@@ -4,27 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto_final</title>
+    <title>LOGIN</title>
     <link rel="stylesheet" href="../static/css/style.css">
       <main class="main-login">
         {% block content %}
+        <h1 class="titulo">Eco Aprendizaje</h1>
         <form action="{{ url_for('login') }}" method="POST" class="login">
             <p class="error">{{error}}</p>
 
-            <!-- Asignación #2 Crear campos de acceso -->
-            <label for="email">
+            <div class="form__group">
+              <h1 class="text">Iniciar sesion </h1>
+              <label for="email">Correo electrónico</label>
               <input class="form__input" type="email" name="email" id="email" placeholder="Introduzca su e-mail" required>
-            </label>
+            </div>
 
-            <label for="password">
+            <div class="form__group">
+              <label for="password">Contraseña</label>
               <input class="form__input" type="password" name="password" id="password" placeholder="Introduzca su password" required>
-            </label>
+            </div>
 
             
 
             <!--  -->
-                <button class="form__button">Iniciar sesión</button>
-                <a href="/reg" class="form__button reg__link">Registrarse</a>
+                <div class="form__footer">
+                  <button class="form__button">Iniciar sesión</button>
+                  <h2 class="reg__link">No tienes una cuenta, ¡crea una!</h2>
+                    <a href="/reg" class="reg__link_texto">Registrarse</a>
+                </div>
         </form>
         {% endblock %}
       </main>
